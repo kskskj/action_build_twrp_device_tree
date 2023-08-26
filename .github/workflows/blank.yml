@@ -26,6 +26,8 @@ jobs:
       
     - name: Download boot or recovery img
       run: |
+        sudo apt-get update
+        sudo apt-get upgrade
         aria2c "${{ github.event.inputs.IMG_URL }}"
         ls
       
