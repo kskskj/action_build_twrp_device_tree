@@ -26,7 +26,7 @@ jobs:
       
     - name: Download boot or recovery img
       run: |
-        sudo apt install aria2c
+        sudo snap install aria2c
         aria2c "${{ github.event.inputs.IMG_URL }}"
         ls
       
